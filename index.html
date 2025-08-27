@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Premium futuristic portfolio showcasing innovative web development and design projects.">
+    <meta name="keywords" content="portfolio, developer, web development, futuristic, cyberpunk, premium">
+    <title>Pranith Sai Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="grid-pattern">
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Effects -->
+    <div id="particles-js" class="background-layer"></div>
+    <div id="farStars" class="background-layer" style="transform: translateZ(-200px) scale(1.5);"></div>
+    <div id="midStars" class="background-layer" style="transform: translateZ(-100px) scale(1.2);"></div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="home"></div>
+        <div class="nav-dot" data-section="about"></div>
+        <div class="nav-dot" data-section="education"></div>
+        <div class="nav-dot" data-section="work"></div>
+        <div class="nav-dot" data-section="skills"></div>
+        <div class="nav-dot" data-section="interests"></div>
+        <div class="nav-dot" data-section="certificates"></div>
+        <div class="nav-dot" data-section="contact"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="glassmorphic">
+            <div class="logo">Pranith Portfolio</div>
+            <nav class="desktop-nav">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#education">EDUCATION</a>
+                <a href="#work">WORK</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#interests">INTERESTS</a>
+                <a href="#certificates">CERTIFICATES</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+            <button aria-label="Toggle menu" class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu glassmorphic">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#education">EDUCATION</a>
+            <a href="#work">WORK</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#interests">INTERESTS</a>
+            <a href="#certificates">CERTIFICATES</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="section scanline">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="orbitron glow">
+                        <span class="gradient-text">Web</span><br>
+                        <span>DEVELOPER</span><br>
+
+                    </h1>
+                    <p>Crafting immersive digital experiences with cutting-edge technology and visionary design.</p>
+                    <div class="hero-buttons">
+                        <a href="#work" class="btn btn-primary">VIEW WORK</a>
+                        <a href="#contact" class="btn btn-secondary">CONTACT ME</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-glow"></div>
+                        <img src="dp.jpeg" alt="Profile" loading="lazy">
+                        <div class="status terminal-cursor">AVAILABLE FOR WORK</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section neon-border">
+            <h2 class="orbitron gradient-text">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="holo-card glassmorphic">
+                    <div class="holo-overlay"></div>
+                    <h3 class="orbitron">Web Developer</h3>
+                    <p>I'm a creator at the intersection of <span class="highlight cyan">technology</span> and <span
+                            class="highlight pink">imagination</span>.
+                    </p>
+                    <p>My mission is to push boundaries, blending <span class="highlight">innovation</span> with <span
+                            class="highlight">design</span> to craft solutions that captivate and inspire.</p>
+                </div>
+                <div class="skill-matrix">
+                    <div class="matrix-item glassmorphic">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Innovation</h3>
+                        <p>Exploring cutting-edge tech</p>
+                    </div>
+                    <div class="matrix-item glassmorphic">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Design</h3>
+                        <p>Creating stunning interfaces</p>
+                    </div>
+                    <div class="matrix-item glassmorphic">
+                        <i class="fas fa-code"></i>
+                        <h3>Development</h3>
+                        <p>Writing robust code</p>
+                    </div>
+                    <div class="matrix-item glassmorphic">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Strategy</h3>
+                        <p>Leveraging data insights</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2 class="orbitron gradient-text">EDUCATION</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card-glow glassmorphic">
+                        <h3>B.E in Computer Science</h3>
+                        <p class="meta">SIMATS Engineering, 2024 - 2028</p>
+                        <p>CGPA: 8.3</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card-glow glassmorphic">
+                        <h3>Intermediate Education</h3>
+                        <p class="meta">Harvest Secondary School 2022 - 2024</p>
+                        <p>Percentage: 72.4%</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card-glow glassmorphic">
+                        <h3>10th Class</h3>
+                        <p class="meta">St.Joseph CBSE High School, 2022</p>
+                        <p>Percentage: 68.1%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="section">
+            <div class="section-header">
+                <h2 class="orbitron gradient-text">RECENT WORK</h2>
+                <a href="#work" class="btn btn-secondary">VIEW ALL PROJECTS</a>
+            </div>
+            <div class="project-grid">
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img1.png" alt="Quantum Web App Thumbnail">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>Netflix Clone</h3>
+                            <span>2025</span>
+                        </div>
+                        <p>A Netflix clone is a web application or mobile app that mimics the core features and design
+                            of the popular streaming platform Netflix.</p>
+                        <div class="tags">
+                            <span>html</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://ott023.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img2.png" alt="Dictionary App Thumbnail">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>Dictionary App</h3>
+                            <span>2025</span>
+                        </div>
+                        <p>A dictionary app is a software application that provides definitions, pronunciations, and
+                            other information about words.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                            <span>css</span>
+                        </div>
+                        <a href="https://wordscholar.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img3.png" alt="Photo Luxe">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>Photo Luxe</h3>
+                            <span>2025</span>
+                        </div>
+                        <p>A revolutionary web application leveraging quantum computing principles for unprecedented
+                            performance.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                            <span>css</span>
+                        </div>
+                        <a href="https://photonluxe.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img4.png" alt="Fitness-Tracker">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>Fitness-Tracker</h3>
+                            <span>2025</span>
+                        </div>
+                        <p>A fitness tracker app is a digital tool that helps users monitor and track their physical
+                            activity, workouts, and health-related data..</p>
+                        <div class="tags">
+                            <span>Python</span>
+
+                        </div>
+                        <a href="https://trackfit.streamlit.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img5.png" alt="Object-Detector">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>Object-Detector</h3>
+                            <span>2025</span>
+                        </div>
+                        <p> An object detector app is a computer vision application that identifies and locates objects
+                            within an image or video, typically by drawing bounding boxes around them and providing a
+                            label.</p>
+                        <div class="tags">
+                            <span>Python</span>
+
+                        </div>
+                        <a href="https://github.com/pranith023/object-detector"
+                            class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img6.png" alt="DREAM PIXELS">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>DREAM PIXELS</h3>
+                            <span>2025</span>
+                        </div>
+                        <p> A photo generator app is an application that uses artificial intelligence to create new
+                            images from text prompts or other inputs.</p>
+                        <div class="tags">
+                            <span>TypeScript</span>
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                            <span>css</span>
+                            <span>Node.js</span>
+
+                        </div>
+                        <a href="https://dreampixels.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img7.png" alt="Weather-App">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>Weather-App</h3>
+                            <span>2025</span>
+                        </div>
+                        <p> A weather app is an application that provides current and future weather conditions, such as
+                            temperature, humidity, and wind speed, for specific locations.</p>
+                        <div class="tags">
+                            <span>TypeScript</span>
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                            <span>css</span>
+                        </div>
+                        <a href="https://windydayz.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img8.png" alt="colour-palette-genarator">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>colour-palette-genarator</h3>
+                            <span>2025</span>
+                        </div>
+                        <p> A color palette generator is a tool that helps designers and artists create a set of
+                            harmonious colors for a project, often based on an initial color, an image, or a specific
+                            design theme.</p>
+                        <div class="tags">
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+
+                        </div>
+                        <a href="https://colorflowstudio.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img9.png" alt="calculator">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>calculator</h3>
+                            <span>2025</span>
+                        </div>
+                        <p> A calculator app is a software application that performs mathematical operations, ranging
+                            from basic arithmetic to complex scientific functions..</p>
+                        <div class="tags">
+                            <span>Python</span>
+
+                        </div>
+                        <a href="https://digitiq.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+                <div class="project-card glassmorphic card-glow">
+                    <div class="project-image neon-border">
+                        <img src="images/img10.png" alt="To-do-list">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <h3>To-do-list</h3>
+                            <span>2025</span>
+                        </div>
+                        <p> A To-do list app is a tool that allows users to create, manage, and track tasks to help them
+                            stay organized and productive.</p>
+                        <div class="tags">
+                            <span>Python</span>
+
+                        </div>
+                        <a href="https://missionlist.netlify.app/notes" class="btn btn-secondary visit-btn">Visit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="orbitron gradient-text">SKILLSET</h2>
+            <div class="skills-grid">
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Building scalable backend services.</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Data analysis and machine learning.</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Enterprise-grade applications.</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                   <i class="fab fa-html5"></i>
+                    <h3>Hyper Text Markup Language</h3>
+                    <p>High-performance systems.</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>React</h3>
+                    <p>Dynamic user interfaces.</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-vuejs"></i>
+                    <h3>Vue</h3>
+                    <p>Lightweight frontend framework.</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-angular"></i>
+                    <h3>CSS</h3>
+                    <p>Styling and Designing </p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Nerve System of Web DevelopmentS</p>
+                </div>
+                <div class="skill-card card-glow glassmorphic">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <p>Version Control</p>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="section">
+            <h2 class="orbitron gradient-text">INTERESTS</h2>
+            <div class="interests-container">
+                <div class="interest-item glassmorphic">
+                    <div class="interest-orb">
+                        <i class="fas fa-robot"></i>
+                        <span class="tooltip">Artificial Intelligence</span>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Exploring AI-driven solutions for automation and personalization.</p>
+                </div>
+                <div class="interest-item glassmorphic">
+                    <div class="interest-orb">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <span class="tooltip">Virtual Reality</span>
+                    </div>
+                    <h3>Virtual Reality</h3>
+                    <p>Creating immersive worlds for gaming and education.</p>
+                </div>
+                <div class="interest-item glassmorphic">
+                    <div class="interest-orb">
+                        <i class="fas fa-plane"></i>
+                        <span class="tooltip">Travelling</span>
+                    </div>
+                    <h3>Travelling</h3>
+                    <p>Exploring and collect Memories</p>
+                </div>
+                <div class="interest-item glassmorphic">
+                    <div class="interest-orb">
+                        <i class="fas fa-headphones"></i>
+                        <span class="tooltip">Music</span>
+                    </div>
+                    <h3>Music</h3>
+                    <p>Music is my escape</p>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="section">
+            <h2 class="orbitron gradient-text">CERTIFICATES</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card card-glow glassmorphic">
+                    <h3>Generative AI Professional</h3>
+                    <p class="meta">ORACLE University, 2025</p>
+                    <button class="btn btn-primary view-cert" data-cert-title="Generative AI Professional"
+                        data-cert-issuer="ORACLE University, 2025"
+                        data-cert-desc="The certificate validates expertise in building and deploying Generative AI applications using Oracle Cloud Infrastructure."
+                        data-cert-image="images/c1.jpg">View Certificate</button>
+                </div>
+                <div class="certificate-card card-glow glassmorphic">
+                    <h3>Python</h3>
+                    <p class="meta">Hacker Rank, 2025</p>
+                    <button class="btn btn-primary view-cert" data-cert-title="Python(Basic)"
+                        data-cert-issuer="Hacker Rank, 2025"
+                        data-cert-desc="The certificate validates expertise in Python programming language."
+                        data-cert-image="images/C2.jpg">View
+                        Certificate</button>
+                </div>
+                <div class="certificate-card card-glow glassmorphic">
+                    <h3>Prompt Engineering Application</h3>
+                    <p class="meta">Simplilearm,Aug, 2025</p>
+                    <button class="btn btn-primary view-cert" data-cert-title="Prompt Engineering Application"
+                        data-cert-issuer="Aug, 2025"
+                        data-cert-desc="The certificate validates expertise in Prompt Engineering."
+                        data-cert-image="images/S1.jpg">View
+                        Certificate</button>
+                </div>
+                <div class="certificate-card card-glow glassmorphic">
+                    <h3>Python Essentials</h3>
+                    <p class="meta">cisco Networking Academy,july, 2025</p>
+                    <button class="btn btn-primary view-cert" data-cert-title="Python Essentials"
+                        data-cert-issuer="july, 2025"
+                        data-cert-desc="The certificate validates expertise in Python programming language."
+                        data-cert-image="images/c4.jpg">View
+                        Certificate</button>
+                </div>
+                <!-- <div class="certificate-card card-glow glassmorphic">
+                    <h3></h3>
+                    <p class="meta">Aug, 2025</p>
+                    <button class="btn btn-primary view-cert" data-cert-title="Prompt Engineering Application"
+                        data-cert-issuer="Aug, 2025"
+                        data-cert-desc="The certificate validates expertise in building and deploying Generative AI applications using Oracle Cloud Infrastructure."
+                        data-cert-image="images/S1.jpg">View
+                        Certificate</button>
+                </div> -->
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Certificate Modal -->
+        <div class="modal glassmorphic" id="cert-modal">
+            <div class="modal-content neon-border">
+                <button class="modal-close">×</button>
+                <h3 id="modal-title"></h3>
+                <p class="meta" id="modal-issuer"></p>
+                <img id="modal-image" src="" alt="Certificate" loading="lazy">
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="orbitron gradient-text">GET IN TOUCH</h2>
+            <div class="contact-content">
+                <div class="contact-info glassmorphic">
+                    <p>Ready to start your next futuristic project? Let's create something extraordinary together.</p>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>EMAIL</span>
+                                <p>praneethsai023@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>LOCATION</span>
+                                <p>KHAMMAM</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <span>PHONE</span>
+                                <p>+91 9392544516</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <!-- <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.linkedin.com/in/pranith-billa-8a9488379" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/pranith023" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form neon-border glassmorphic">
+                    <form id="contact-form" action="https://getform.io/f/akkpnyoa" method="POST">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                    </form>
+                    <div id="form-status-message"></div>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="glassmorphic">
+            <div class="footer-content">
+                <p>© 2025 Designed by <a href="#" class="footer-link">Pranith Sai</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
