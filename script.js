@@ -124,7 +124,7 @@
       });
 
       gsap.utils.toArray(".section-kicker").forEach(element => {
-        ScrollTrigger.create({
+        window.ScrollTrigger.create({
           trigger: element, start: "top 88%", once: true,
           onEnter: () => element.classList.add("is-visible")
         });
