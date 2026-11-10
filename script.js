@@ -103,7 +103,7 @@
       .from(".hero-meta", { opacity: 0, y: 12, duration: .5 }, "-=.25")
       .from(".hero-art", { scale: .86, opacity: 0, rotateY: -12, duration: 1.2 }, "-=1.05")
       .from(".floating-chip", { opacity: 0, scale: .75, stagger: .16, duration: .45 }, "-=.7");
-    gsap.utils.toArray(".reveal").forEach((el, i) => gsap.fromTo(el,
+    gsap.utils.toArray(".reveal:not(.project-card)").forEach((el, i) => gsap.fromTo(el,
       { opacity: 0, y: 38, rotateX: 3 },
       { opacity: 1, y: 0, rotateX: 0, duration: .8, ease: "power2.out",
         scrollTrigger: { trigger: el, start: "top 88%", once: true } }
