@@ -90,10 +90,12 @@
     });
   }
 
-  // GSAP: layered entrance, scroll reveals, parallax and staggered project choreography.
+  // GSAP motion. ScrollTrigger is optional; IntersectionObserver is the fallback.
   if (!reduced && window.gsap) {
     document.documentElement.classList.add("js-motion");
-    if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+    const hasScrollTrigger = Boolean(window.ScrollTrigger);
+    if (hasScrollTrigger) gsap.registerPlugin(window.ScrollTrigger);
+
     const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
     intro.from(".availability", { y: 18, opacity: 0, duration: .65 })
       .from(".hero-copy .eyebrow", { x: -22, opacity: 0, duration: .55 }, "-=.38")
@@ -103,20 +105,61 @@
       .from(".hero-meta", { opacity: 0, y: 12, duration: .5 }, "-=.25")
       .from(".hero-art", { scale: .86, opacity: 0, rotateY: -12, duration: 1.2 }, "-=1.05")
       .from(".floating-chip", { opacity: 0, scale: .75, stagger: .16, duration: .45 }, "-=.7");
-    gsap.utils.toArray(".reveal:not(.project-card)").forEach((el, i) => gsap.fromTo(el,
-      { opacity: 0, y: 38, rotateX: 3 },
-      { opacity: 1, y: 0, rotateX: 0, duration: .8, ease: "power2.out",
-        scrollTrigger: { trigger: el, start: "top 88%", once: true } }
-    ));
-    gsap.utils.toArray(".section-kicker").forEach(el => {
-      ScrollTrigger.create({ trigger: el, start: "top 88%", once: true, onEnter: () => el.classList.add("is-visible") });
-    });
-    gsap.to(".hero-art", { yPercent: 10, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .7 } });
-    gsap.to(".hero-copy", { yPercent: 5, opacity: .55, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .7 } });
-    gsap.utils.toArray(".project-card").forEach((card, index) => {
-      gsap.from(card, { y: 35, opacity: 0, duration: .7, delay: (index % 3) * .07, ease: "power2.out",
-        scrollTrigger: { trigger: card, start: "top 92%", once: true } });
-    });
+
+    const revealElements = gsap.utils.toArray(".reveal");
+    const revealOne = (element, delay = 0) => gsap.fromTo(element,
+      { opacity: 0, y: 34, rotateX: 2 },
+      { opacity: 1, y: 0, rotateX: 0, duration: .78, delay, ease: "power2.out", clearProps: "transform" }
+    );
+
+    if (hasScrollTrigger) {
+      revealElements.forEach((element, index) => {
+        gsap.fromTo(element,
+          { opacity: 0, y: 34, rotateX: 2 },
+          { opacity: 1, y: 0, rotateX: 0, duration: .78, delay: (index % 3) * .06,
+            ease: "power2.out", clearProps: "transform",
+            scrollTrigger: { trigger: element, start: "top 90%", once: true }
+          }
+        );
+      });
+
+      gsap.utils.toArray(".section-kicker").forEach(element => {
+        window.ScrollTrigger.create({
+          trigger: element, start: "top 88%", once: true,
+          onEnter: () => element.classList.add("is-visible")
+        });
+      });
+      gsap.to(".hero-art", {
+        yPercent: 10, ease: "none",
+        scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .7 }
+      });
+      gsap.to(".hero-copy", {
+        yPercent: 5, opacity: .55, ease: "none",
+        scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: .7 }
+      });
+    } else if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          revealOne(entry.target);
+          revealObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: .04 });
+      revealElements.forEach(element => revealObserver.observe(element));
+
+      const kickerObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          kickerObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px" });
+      document.querySelectorAll(".section-kicker").forEach(element => kickerObserver.observe(element));
+    } else {
+      // Older browsers: never leave portfolio content hidden.
+      revealElements.forEach((element, index) => revealOne(element, (index % 3) * .06));
+      document.querySelectorAll(".section-kicker").forEach(element => element.classList.add("is-visible"));
+    }
   }
 
   // Mouse-reactive light, subtle 3D tilt and magnetic action buttons.
