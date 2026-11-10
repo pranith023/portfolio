@@ -1,596 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Premium futuristic portfolio showcasing innovative web development and design projects.">
-    <meta name="keywords" content="portfolio, developer, web development, futuristic, cyberpunk, premium">
-    <title>Pranith Sai Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="Pranith Sai — AI Engineer and Full Stack Developer exploring intelligent systems, machine learning and thoughtful digital experiences.">
+<meta name="keywords" content="Pranith Sai, AI Engineer, Machine Learning, Full Stack Developer, Python, Computer Vision">
+<meta property="og:title" content="Pranith Sai — AI Engineer & Full Stack Developer"><meta property="og:description" content="Building intelligent systems. Creating digital experiences."><meta property="og:type" content="website">
+<title>Pranith Sai — AI Engineer & Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
+<body>
+<canvas id="neural-canvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div>
+<header class="site-header">
+<a class="brand" href="#home"><span class="brand-mark">P.</span><span>PRANITH SAI<small>AI ENGINEER · DEVELOPER</small></span></a>
+<button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+<nav class="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#journey">Journey</a><a class="nav-contact" href="#contact">Let's talk <b>↗</b></a></nav>
+</header>
+<main>
+<section id="home" class="hero section-shell">
+<div class="hero-copy">
+<div class="availability"><i></i> OPEN TO OPPORTUNITIES & COLLABORATION</div>
+<p class="eyebrow">HELLO, I'M PRANITH SAI</p>
+<h1>Building <span class="gradient-text">intelligent</span><br>systems.<br><span class="muted-heading">Creating digital</span><br>experiences<span class="accent-dot">.</span></h1>
+<p class="hero-description">AI Engineering student and full-stack developer exploring the space where machine learning meets meaningful products.</p>
+<div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <b>↗</b></a><a class="button button-ghost" href="#contact">Let's connect <b>↗</b></a></div>
+<div class="hero-meta"><span><i></i> BASED IN INDIA</span><span>AI / ML · WEB · EXPERIMENTATION</span></div>
+</div>
+<div class="hero-art" aria-label="Abstract animated neural network visualization">
+<div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-orbit orbit-three"></div>
+<div class="art-core"><span>AI<span>.</span></span><i></i></div>
+<div class="floating-chip chip-a">MODEL / 01</div><div class="floating-chip chip-b">INTELLIGENCE</div><div class="floating-chip chip-c">BUILD · LEARN · REPEAT</div>
+<div class="art-caption"><span>FIG 01</span> A SYSTEMS-THINKING MINDSET</div>
+</div>
+<a class="scroll-cue" href="#about"><i></i> SCROLL TO EXPLORE</a>
+</section>
 
-<body class="grid-pattern">
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+<section id="about" class="content-section section-shell">
+<div class="section-kicker"><span>01 / ABOUT</span><span>THE PERSON BEHIND THE BUILDS</span></div>
+<div class="about-layout">
+<div><p class="eyebrow">CURIOUS BY DESIGN</p><h2>Technology is the tool.<br><span class="muted-heading">Impact is the point.</span></h2></div>
+<div class="about-copy"><p>I'm Pranith Sai, a Computer Science student focused on AI engineering and full-stack development. I enjoy taking ideas from a rough sketch to a working product — whether that means experimenting with computer vision, exploring generative AI, or crafting a useful web experience.</p><p>I'm continuously learning, building and refining my approach to software: thoughtful interfaces on the surface, reliable engineering underneath.</p><div class="about-signoff">CURRENT FOCUS <b>AI · MACHINE LEARNING · FULL STACK</b></div></div>
+</div>
+<div class="focus-strip"><div><span>01</span><b>Learn deeply</b><small>Strong foundations, curious experiments.</small></div><div><span>02</span><b>Build thoughtfully</b><small>Useful products with clear purpose.</small></div><div><span>03</span><b>Keep iterating</b><small>Measure, improve, and keep shipping.</small></div></div>
+</section>
 
-    <!-- Background Effects -->
-    <div id="particles-js" class="background-layer"></div>
-    <div id="farStars" class="background-layer" style="transform: translateZ(-200px) scale(1.5);"></div>
-    <div id="midStars" class="background-layer" style="transform: translateZ(-100px) scale(1.2);"></div>
+<section id="work" class="content-section section-shell">
+<div class="section-kicker"><span>02 / SELECTED WORK</span><span>EXPERIMENTS, PRODUCTS & BUILDS</span></div>
+<div class="section-heading"><div><p class="eyebrow">A FEW THINGS I'VE MADE</p><h2>Proof of <span class="gradient-text">curiosity.</span></h2></div><p>From interactive web experiences to computer-vision experiments — each project is a step forward.</p></div>
+<div class="project-grid">
+<article class="project-card reveal"><div class="project-visual"><img src="images/img1.png" alt="Netflix Clone project preview" loading="lazy"><span>01</span><a href="https://ott023.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Netflix Clone">↗</a></div><div class="project-body"><div class="project-title"><h3>Netflix Clone</h3><small>WEB EXPERIENCE</small></div><p>A streaming interface recreation focused on browsing, discovery and responsive UI.</p><div class="tags"><i>HTML</i><i>CSS</i><i>JavaScript</i></div><a class="text-link" href="https://ott023.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img2.png" alt="Dictionary App project preview" loading="lazy"><span>02</span><a href="https://wordscholar.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Dictionary App">↗</a></div><div class="project-body"><div class="project-title"><h3>Dictionary App</h3><small>WEB UTILITY</small></div><p>A word lookup experience for definitions and language exploration.</p><div class="tags"><i>HTML</i><i>JavaScript</i><i>CSS</i></div><a class="text-link" href="https://wordscholar.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img3.png" alt="Photo Luxe project preview" loading="lazy"><span>03</span><a href="https://photonluxe.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Photo Luxe">↗</a></div><div class="project-body"><div class="project-title"><h3>Photo Luxe</h3><small>WEB EXPERIENCE</small></div><p>A photography-focused web experience with a polished visual presentation.</p><div class="tags"><i>HTML</i><i>JavaScript</i><i>CSS</i></div><a class="text-link" href="https://photonluxe.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img4.png" alt="Fitness Tracker project preview" loading="lazy"><span>04</span><a href="https://trackfit.streamlit.app/" target="_blank" rel="noreferrer" aria-label="Open Fitness Tracker">↗</a></div><div class="project-body"><div class="project-title"><h3>Fitness Tracker</h3><small>PYTHON APP</small></div><p>A fitness tracking application built with Python and Streamlit.</p><div class="tags"><i>Python</i><i>Streamlit</i></div><a class="text-link" href="https://trackfit.streamlit.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img5.png" alt="Object Detector project preview" loading="lazy"><span>05</span><a href="https://github.com/pranith023/object-detector" target="_blank" rel="noreferrer" aria-label="Open Object Detector">↗</a></div><div class="project-body"><div class="project-title"><h3>Object Detector</h3><small>COMPUTER VISION</small></div><p>A computer-vision project that identifies and locates objects in images or video.</p><div class="tags"><i>Python</i><i>OpenCV</i><i>YOLO</i></div><a class="text-link" href="https://github.com/pranith023/object-detector" target="_blank" rel="noreferrer">View repository <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img6.png" alt="Dream Pixels project preview" loading="lazy"><span>06</span><a href="https://dreampixels.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Dream Pixels">↗</a></div><div class="project-body"><div class="project-title"><h3>Dream Pixels</h3><small>GENERATIVE AI</small></div><p>An AI image-generation experience built with modern web technologies.</p><div class="tags"><i>TypeScript</i><i>Node.js</i><i>JavaScript</i></div><a class="text-link" href="https://dreampixels.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img7.png" alt="Weather App project preview" loading="lazy"><span>07</span><a href="https://breezeaura.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Weather App">↗</a></div><div class="project-body"><div class="project-title"><h3>Weather App</h3><small>WEB UTILITY</small></div><p>A responsive weather interface for exploring current and forecast conditions.</p><div class="tags"><i>TypeScript</i><i>JavaScript</i><i>CSS</i></div><a class="text-link" href="https://breezeaura.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img8.png" alt="Colour Palette Generator preview" loading="lazy"><span>08</span><a href="https://colorflowstudio.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Colour Palette Generator">↗</a></div><div class="project-body"><div class="project-title"><h3>Colour Palette Generator</h3><small>DESIGN TOOL</small></div><p>A design utility for creating harmonious colour palettes.</p><div class="tags"><i>TypeScript</i><i>Node.js</i></div><a class="text-link" href="https://colorflowstudio.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img9.png" alt="Calculator project preview" loading="lazy"><span>09</span><a href="https://digitiq.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Calculator">↗</a></div><div class="project-body"><div class="project-title"><h3>Calculator</h3><small>WEB UTILITY</small></div><p>A clean utility for everyday mathematical calculations.</p><div class="tags"><i>Python</i></div><a class="text-link" href="https://digitiq.netlify.app/" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+<article class="project-card reveal"><div class="project-visual"><img src="images/img10.png" alt="To-do List project preview" loading="lazy"><span>10</span><a href="https://missionlist.netlify.app/notes" target="_blank" rel="noreferrer" aria-label="Open To-do List">↗</a></div><div class="project-body"><div class="project-title"><h3>To-do List</h3><small>PRODUCTIVITY</small></div><p>A task-management interface to organise daily work and priorities.</p><div class="tags"><i>Web</i><i>JavaScript</i></div><a class="text-link" href="https://missionlist.netlify.app/notes" target="_blank" rel="noreferrer">View project <b>↗</b></a></div></article>
+</div>
+<div class="work-note"><span>MORE ON GITHUB</span><a href="https://github.com/pranith023" target="_blank" rel="noreferrer">Explore the code archive ↗</a></div>
+</section>
 
-    <!-- Navigation Dots -->
-    <div class="nav-dots">
-        <div class="nav-dot active" data-section="home"></div>
-        <div class="nav-dot" data-section="about"></div>
-        <div class="nav-dot" data-section="education"></div>
-        <div class="nav-dot" data-section="work"></div>
-        <div class="nav-dot" data-section="skills"></div>
-        <div class="nav-dot" data-section="interests"></div>
-        <div class="nav-dot" data-section="certificates"></div>
-        <div class="nav-dot" data-section="contact"></div>
-    </div>
+<section id="capabilities" class="content-section section-shell">
+<div class="section-kicker"><span>03 / CAPABILITIES</span><span>TOOLS I USE TO TURN IDEAS INTO REALITY</span></div>
+<div class="section-heading"><div><p class="eyebrow">MY TOOLKIT</p><h2>From models to <span class="gradient-text">interfaces.</span></h2></div><p>A growing toolkit across AI, software engineering and deployment. Always learning — always sharpening the fundamentals.</p></div>
+<div class="capability-grid">
+<article class="capability-card reveal"><small>01</small><div class="cap-icon">✳</div><h3>AI & Machine Learning</h3><p>Exploring data-driven systems, model workflows and intelligent applications.</p><div class="skill-list"><i>Python</i><i>NumPy</i><i>Pandas</i><i>Scikit-learn</i><i>OpenCV</i><i>YOLOv8</i></div></article>
+<article class="capability-card reveal"><small>02</small><div class="cap-icon">⌘</div><h3>Frontend Engineering</h3><p>Building responsive interfaces with a focus on interaction and visual craft.</p><div class="skill-list"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>TypeScript</i><i>React</i><i>Three.js</i></div></article>
+<article class="capability-card reveal"><small>03</small><div class="cap-icon">⌬</div><h3>Backend & Platforms</h3><p>Connecting interfaces to services, data and deployment workflows.</p><div class="skill-list"><i>Node.js</i><i>Firebase</i><i>Supabase</i><i>SQL</i><i>REST APIs</i><i>Git</i><i>Docker</i></div></article>
+</div>
+<p class="skills-disclaimer">Skills shown reflect technologies explored across my projects and learning journey.</p>
+<div class="research-callout reveal"><div><p class="eyebrow">RESEARCH INTEREST</p><h3>AI that is smarter <em>and</em> more sustainable.</h3><p>I'm interested in carbon-aware intelligence, reinforcement learning and energy-efficient AI systems — including research directions for smart-campus energy management.</p></div><span>↗</span></div>
+</section>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Header -->
-        <header class="glassmorphic">
-            <div class="logo">Pranith Portfolio</div>
-            <nav class="desktop-nav">
-                <a href="#home">HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="#education">EDUCATION</a>
-                <a href="#work">WORK</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#interests">INTERESTS</a>
-                <a href="#certificates">CERTIFICATES</a>
-                <a href="#contact">CONTACT</a>
-            </nav>
-            <button aria-label="Toggle menu" class="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </header>
+<section id="journey" class="content-section section-shell">
+<div class="section-kicker"><span>04 / JOURNEY</span><span>LEARNING IS A LONG GAME</span></div>
+<div class="journey-layout"><div><p class="eyebrow">EDUCATION</p><h2>Building the <span class="gradient-text">foundation.</span></h2><p class="journey-intro">A computer science journey shaped by curiosity, hands-on practice and continuous learning.</p></div>
+<div class="timeline">
+<article class="timeline-entry"><time>2024 — 2028</time><div><h3>B.E. in Computer Science</h3><p>SIMATS Engineering</p><small>CGPA: 8.3 · As listed in my current portfolio</small></div></article>
+<article class="timeline-entry"><time>2022 — 2024</time><div><h3>Intermediate Education</h3><p>Harvest Secondary School</p><small>Percentage: 72.4%</small></div></article>
+<article class="timeline-entry"><time>2022</time><div><h3>Class X · CBSE</h3><p>St. Joseph CBSE High School</p><small>Percentage: 68.1%</small></div></article>
+</div></div>
+<div class="certificate-section"><div class="certificate-heading"><div><p class="eyebrow">CONTINUOUS LEARNING</p><h2>Credentials<span class="accent-dot">.</span></h2></div><span>SELECTED CERTIFICATES</span></div>
+<div class="cert-grid">
+<article class="cert-card reveal"><p class="eyebrow">CERTIFICATION</p><h3>Generative AI Professional</h3><p>Oracle University · 2025</p><button class="text-link cert-open" data-title="Generative AI Professional" data-meta="Oracle University · 2025" data-image="images/c1.jpg">View credential ↗</button></article>
+<article class="cert-card reveal"><p class="eyebrow">CERTIFICATION</p><h3>Python (Basic)</h3><p>HackerRank · 2025</p><button class="text-link cert-open" data-title="Python (Basic)" data-meta="HackerRank · 2025" data-image="images/C2.jpg">View credential ↗</button></article>
+<article class="cert-card reveal"><p class="eyebrow">CERTIFICATION</p><h3>Prompt Engineering Application</h3><p>Simplilearn · 2025</p><button class="text-link cert-open" data-title="Prompt Engineering Application" data-meta="Simplilearn · 2025" data-image="images/S1.jpg">View credential ↗</button></article>
+<article class="cert-card reveal"><p class="eyebrow">CERTIFICATION</p><h3>Python Essentials</h3><p>Cisco Networking Academy · July 2025</p><button class="text-link cert-open" data-title="Python Essentials" data-meta="Cisco Networking Academy · July 2025" data-image="images/c4.jpg">View credential ↗</button></article>
+</div></div>
+</section>
 
-        <!-- Mobile Menu -->
-        <nav class="mobile-menu glassmorphic">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#education">EDUCATION</a>
-            <a href="#work">WORK</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#interests">INTERESTS</a>
-            <a href="#certificates">CERTIFICATES</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
-
-        <!-- Hero Section -->
-        <section id="home" class="section scanline">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="orbitron glow">
-                        <span class="gradient-text">Web</span><br>
-                        <span>DEVELOPER</span><br>
-
-                    </h1>
-                    <p>Crafting immersive digital experiences with cutting-edge technology and visionary design.</p>
-                    <div class="hero-buttons">
-                        <a href="#work" class="btn btn-primary">VIEW WORK</a>
-                        <a href="#contact" class="btn btn-secondary">CONTACT ME</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="image-glow"></div>
-                        <img src="images/dp1.jpg" alt="Profile" loading="lazy">
-                        <div class="status terminal-cursor">AVAILABLE FOR WORK</div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section neon-border">
-            <h2 class="orbitron gradient-text">ABOUT ME</h2>
-            <div class="about-content">
-                <div class="holo-card glassmorphic">
-                    <div class="holo-overlay"></div>
-                    <h3 class="orbitron">Web Developer</h3>
-                    <p>I'm a creator at the intersection of <span class="highlight cyan">technology</span> and <span
-                            class="highlight pink">imagination</span>.
-                    </p>
-                    <p>My mission is to push boundaries, blending <span class="highlight">innovation</span> with <span
-                            class="highlight">design</span> to craft solutions that captivate and inspire.</p>
-                </div>
-                <div class="skill-matrix">
-                    <div class="matrix-item glassmorphic">
-                        <i class="fas fa-rocket"></i>
-                        <h3>Innovation</h3>
-                        <p>Exploring cutting-edge tech</p>
-                    </div>
-                    <div class="matrix-item glassmorphic">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Design</h3>
-                        <p>Creating stunning interfaces</p>
-                    </div>
-                    <div class="matrix-item glassmorphic">
-                        <i class="fas fa-code"></i>
-                        <h3>Development</h3>
-                        <p>Writing robust code</p>
-                    </div>
-                    <div class="matrix-item glassmorphic">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Strategy</h3>
-                        <p>Leveraging data insights</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <h2 class="orbitron gradient-text">EDUCATION</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card-glow glassmorphic">
-                        <h3>B.E in Computer Science</h3>
-                        <p class="meta">SIMATS Engineering, 2024 - 2028</p>
-                        <p>CGPA: 8.3</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card-glow glassmorphic">
-                        <h3>Intermediate Education</h3>
-                        <p class="meta">Harvest Secondary School 2022 - 2024</p>
-                        <p>Percentage: 72.4%</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card-glow glassmorphic">
-                        <h3>10th Class</h3>
-                        <p class="meta">St.Joseph CBSE High School, 2022</p>
-                        <p>Percentage: 68.1%</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Work Section -->
-        <section id="work" class="section">
-            <div class="section-header">
-                <h2 class="orbitron gradient-text">RECENT WORK</h2>
-                <a href="#work" class="btn btn-secondary">VIEW ALL PROJECTS</a>
-            </div>
-            <div class="project-grid">
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img1.png" alt="Quantum Web App Thumbnail">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>Netflix Clone</h3>
-                            <span>2025</span>
-                        </div>
-                        <p>A Netflix clone is a web application or mobile app that mimics the core features and design
-                            of the popular streaming platform Netflix.</p>
-                        <div class="tags">
-                            <span>html</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="https://ott023.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img2.png" alt="Dictionary App Thumbnail">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>Dictionary App</h3>
-                            <span>2025</span>
-                        </div>
-                        <p>A dictionary app is a software application that provides definitions, pronunciations, and
-                            other information about words.</p>
-                        <div class="tags">
-                            <span>HTML</span>
-                            <span>JavaScript</span>
-                            <span>css</span>
-                        </div>
-                        <a href="https://wordscholar.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img3.png" alt="Photo Luxe">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>Photo Luxe</h3>
-                            <span>2025</span>
-                        </div>
-                        <p>A revolutionary web application leveraging quantum computing principles for unprecedented
-                            performance.</p>
-                        <div class="tags">
-                            <span>HTML</span>
-                            <span>JavaScript</span>
-                            <span>css</span>
-                        </div>
-                        <a href="https://photonluxe.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img4.png" alt="Fitness-Tracker">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>Fitness-Tracker</h3>
-                            <span>2025</span>
-                        </div>
-                        <p>A fitness tracker app is a digital tool that helps users monitor and track their physical
-                            activity, workouts, and health-related data..</p>
-                        <div class="tags">
-                            <span>Python</span>
-
-                        </div>
-                        <a href="https://trackfit.streamlit.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img5.png" alt="Object-Detector">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>Object-Detector</h3>
-                            <span>2025</span>
-                        </div>
-                        <p> An object detector app is a computer vision application that identifies and locates objects
-                            within an image or video, typically by drawing bounding boxes around them and providing a
-                            label.</p>
-                        <div class="tags">
-                            <span>Python</span>
-
-                        </div>
-                        <a href="https://github.com/pranith023/object-detector"
-                            class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img6.png" alt="DREAM PIXELS">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>DREAM PIXELS</h3>
-                            <span>2025</span>
-                        </div>
-                        <p> A photo generator app is an application that uses artificial intelligence to create new
-                            images from text prompts or other inputs.</p>
-                        <div class="tags">
-                            <span>TypeScript</span>
-                            <span>HTML</span>
-                            <span>JavaScript</span>
-                            <span>css</span>
-                            <span>Node.js</span>
-
-                        </div>
-                        <a href="https://dreampixels.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img7.png" alt="Weather-App">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>Weather-App</h3>
-                            <span>2025</span>
-                        </div>
-                        <p> A weather app is an application that provides current and future weather conditions, such as
-                            temperature, humidity, and wind speed, for specific locations.</p>
-                        <div class="tags">
-                            <span>TypeScript</span>
-                            <span>HTML</span>
-                            <span>JavaScript</span>
-                            <span>css</span>
-                        </div>
-                        <a href="https://breezeaura.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img8.png" alt="colour-palette-genarator">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>colour-palette-genarator</h3>
-                            <span>2025</span>
-                        </div>
-                        <p> A color palette generator is a tool that helps designers and artists create a set of
-                            harmonious colors for a project, often based on an initial color, an image, or a specific
-                            design theme.</p>
-                        <div class="tags">
-                            <span>TypeScript</span>
-                            <span>Node.js</span>
-
-                        </div>
-                        <a href="https://colorflowstudio.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img9.png" alt="calculator">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>calculator</h3>
-                            <span>2025</span>
-                        </div>
-                        <p> A calculator app is a software application that performs mathematical operations, ranging
-                            from basic arithmetic to complex scientific functions..</p>
-                        <div class="tags">
-                            <span>Python</span>
-
-                        </div>
-                        <a href="https://digitiq.netlify.app/" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-                <div class="project-card glassmorphic card-glow">
-                    <div class="project-image neon-border">
-                        <img src="images/img10.png" alt="To-do-list">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-meta">
-                            <h3>To-do-list</h3>
-                            <span>2025</span>
-                        </div>
-                        <p> A To-do list app is a tool that allows users to create, manage, and track tasks to help them
-                            stay organized and productive.</p>
-                        <div class="tags">
-                            <span>Python</span>
-
-                        </div>
-                        <a href="https://missionlist.netlify.app/notes" class="btn btn-secondary visit-btn">Visit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2 class="orbitron gradient-text">SKILLSET</h2>
-            <div class="skills-grid">
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Node.js</h3>
-                    <p>Building scalable backend services.</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                    <p>Data analysis and machine learning.</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-java"></i>
-                    <h3>Java</h3>
-                    <p>Enterprise-grade applications.</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                   <i class="fab fa-html5"></i>
-                    <h3>Hyper Text Markup Language</h3>
-                    <p>High-performance systems.</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>React</h3>
-                    <p>Dynamic user interfaces.</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-vuejs"></i>
-                    <h3>Vue</h3>
-                    <p>Lightweight frontend framework.</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-angular"></i>
-                    <h3>CSS</h3>
-                    <p>Styling and Designing </p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                    <p>Nerve System of Web DevelopmentS</p>
-                </div>
-                <div class="skill-card card-glow glassmorphic">
-                    <i class="fab fa-git-alt"></i>
-                    <h3>Git</h3>
-                    <p>Version Control</p>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Interests Section -->
-        <section id="interests" class="section">
-            <h2 class="orbitron gradient-text">INTERESTS</h2>
-            <div class="interests-container">
-                <div class="interest-item glassmorphic">
-                    <div class="interest-orb">
-                        <i class="fas fa-robot"></i>
-                        <span class="tooltip">Artificial Intelligence</span>
-                    </div>
-                    <h3>Artificial Intelligence</h3>
-                    <p>Exploring AI-driven solutions for automation and personalization.</p>
-                </div>
-                <div class="interest-item glassmorphic">
-                    <div class="interest-orb">
-                        <i class="fas fa-vr-cardboard"></i>
-                        <span class="tooltip">Virtual Reality</span>
-                    </div>
-                    <h3>Virtual Reality</h3>
-                    <p>Creating immersive worlds for gaming and education.</p>
-                </div>
-                <div class="interest-item glassmorphic">
-                    <div class="interest-orb">
-                        <i class="fas fa-plane"></i>
-                        <span class="tooltip">Travelling</span>
-                    </div>
-                    <h3>Travelling</h3>
-                    <p>Exploring and collect Memories</p>
-                </div>
-                <div class="interest-item glassmorphic">
-                    <div class="interest-orb">
-                        <i class="fas fa-headphones"></i>
-                        <span class="tooltip">Music</span>
-                    </div>
-                    <h3>Music</h3>
-                    <p>Music is my escape</p>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="section">
-            <h2 class="orbitron gradient-text">CERTIFICATES</h2>
-            <div class="certificates-grid">
-                <div class="certificate-card card-glow glassmorphic">
-                    <h3>Generative AI Professional</h3>
-                    <p class="meta">ORACLE University, 2025</p>
-                    <button class="btn btn-primary view-cert" data-cert-title="Generative AI Professional"
-                        data-cert-issuer="ORACLE University, 2025"
-                        data-cert-desc="The certificate validates expertise in building and deploying Generative AI applications using Oracle Cloud Infrastructure."
-                        data-cert-image="images/c1.jpg">View Certificate</button>
-                </div>
-                <div class="certificate-card card-glow glassmorphic">
-                    <h3>Python</h3>
-                    <p class="meta">Hacker Rank, 2025</p>
-                    <button class="btn btn-primary view-cert" data-cert-title="Python(Basic)"
-                        data-cert-issuer="Hacker Rank, 2025"
-                        data-cert-desc="The certificate validates expertise in Python programming language."
-                        data-cert-image="images/C2.jpg">View
-                        Certificate</button>
-                </div>
-                <div class="certificate-card card-glow glassmorphic">
-                    <h3>Prompt Engineering Application</h3>
-                    <p class="meta">Simplilearm,Aug, 2025</p>
-                    <button class="btn btn-primary view-cert" data-cert-title="Prompt Engineering Application"
-                        data-cert-issuer="Aug, 2025"
-                        data-cert-desc="The certificate validates expertise in Prompt Engineering."
-                        data-cert-image="images/S1.jpg">View
-                        Certificate</button>
-                </div>
-                <div class="certificate-card card-glow glassmorphic">
-                    <h3>Python Essentials</h3>
-                    <p class="meta">cisco Networking Academy,july, 2025</p>
-                    <button class="btn btn-primary view-cert" data-cert-title="Python Essentials"
-                        data-cert-issuer="july, 2025"
-                        data-cert-desc="The certificate validates expertise in Python programming language."
-                        data-cert-image="images/c4.jpg">View
-                        Certificate</button>
-                </div>
-                <!-- <div class="certificate-card card-glow glassmorphic">
-                    <h3></h3>
-                    <p class="meta">Aug, 2025</p>
-                    <button class="btn btn-primary view-cert" data-cert-title="Prompt Engineering Application"
-                        data-cert-issuer="Aug, 2025"
-                        data-cert-desc="The certificate validates expertise in building and deploying Generative AI applications using Oracle Cloud Infrastructure."
-                        data-cert-image="images/S1.jpg">View
-                        Certificate</button>
-                </div> -->
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Certificate Modal -->
-        <div class="modal glassmorphic" id="cert-modal">
-            <div class="modal-content neon-border">
-                <button class="modal-close">×</button>
-                <h3 id="modal-title"></h3>
-                <p class="meta" id="modal-issuer"></p>
-                <img id="modal-image" src="" alt="Certificate" loading="lazy">
-                <p id="modal-desc"></p>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2 class="orbitron gradient-text">GET IN TOUCH</h2>
-            <div class="contact-content">
-                <div class="contact-info glassmorphic">
-                    <p>Ready to start your next futuristic project? Let's create something extraordinary together.</p>
-                    <div class="info-items">
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <span>EMAIL</span>
-                                <p>praneethsai023@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <span>LOCATION</span>
-                                <p>KHAMMAM</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <span>PHONE</span>
-                                <p>+91 9392544516</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <!-- <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://www.linkedin.com/in/pranith-billa-8a9488379" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/pranith023" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form neon-border glassmorphic">
-                    <form id="contact-form" action="https://getform.io/f/akkpnyoa" method="POST">
-                        <div class="form-group">
-                            <label for="name">NAME</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">MESSAGE</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-                    </form>
-                    <div id="form-status-message"></div>
-                </div>
-            </div>
-            <div class="section-divider"></div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="glassmorphic">
-            <div class="footer-content">
-                <p>© 2025 Designed by <a href="#" class="footer-link">Pranith Sai</a></p>
-            </div>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+<section id="contact" class="contact-section section-shell">
+<div class="section-kicker"><span>05 / CONTACT</span><span>HAVE AN IDEA? LET'S BUILD IT.</span></div>
+<div class="contact-main"><div><p class="eyebrow">THE NEXT GOOD THING STARTS WITH A CONVERSATION</p><h2>Let's make<br>something <span class="gradient-text">matter.</span></h2><p class="contact-lede">Open to meaningful conversations, collaborations and opportunities in AI and software engineering.</p><a class="email-link" href="mailto:praneethsai023@gmail.com">praneethsai023@gmail.com ↗</a></div>
+<div class="contact-side"><p class="eyebrow">FIND ME AROUND THE WEB</p><a href="https://github.com/pranith023" target="_blank" rel="noreferrer">GitHub <b>↗</b></a><a href="https://www.linkedin.com/in/pranith-billa-8a9488379" target="_blank" rel="noreferrer">LinkedIn <b>↗</b></a><div class="contact-location"><span>LOCATION</span><strong>India</strong></div><p class="contact-small">For a quick hello, use email. For code and experiments, visit GitHub.</p></div>
+</div>
+<footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">P.</span><span>PRANITH SAI<small>BUILDING WHAT'S NEXT</small></span></a><span>© <b id="year"></b> PRANITH SAI · DESIGNED WITH INTENTION</span><a href="#home">BACK TO TOP ↑</a></footer>
+</section>
+</main>
+<div class="certificate-modal" role="dialog" aria-modal="true" aria-label="Certificate preview" hidden><div class="modal-panel"><button class="modal-close" aria-label="Close certificate preview">×</button><p class="eyebrow">CERTIFICATE</p><h3 class="modal-title"></h3><p class="modal-meta"></p><img class="modal-image" alt="Certificate preview"></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js" defer></script><script src="script.js" defer></script>
+</body></html>
