@@ -14,7 +14,7 @@
 
 /* FUTURE MOTION LAYER */
 html{scrollbar-color:#294455 #080b12}
-body{cursor:none}
+body{cursor:auto}
 body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;background:repeating-linear-gradient(0deg,rgba(118,225,245,.018) 0,rgba(118,225,245,.018) 1px,transparent 1px,transparent 5px);mix-blend-mode:screen;opacity:.22}
 .scroll-progress{position:fixed;z-index:100;top:0;left:0;width:100%;height:2px;background:rgba(255,255,255,.04)}
 .scroll-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#53d8ed,#9e8dff,#8bf0c1);box-shadow:0 0 14px rgba(110,231,245,.75);transform-origin:left}
@@ -70,7 +70,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:4;backg
 .section-kicker.is-visible:after{animation:section-line 1.2s ease forwards}
 @keyframes section-line{to{width:100%}}
 .reveal{backface-visibility:hidden}
-@media(hover:hover) and (pointer:fine){.cursor-dot,.cursor-ring{opacity:1}}
+@media(hover:hover) and (pointer:fine){body{cursor:none}.cursor-dot,.cursor-ring{opacity:1}}
 @media(max-width:680px){body{cursor:auto}.cursor-dot,.cursor-ring{display:none}.hero:before{background-size:38px 38px}.ticker-track{animation-duration:42s}.signal-ticker{padding:14px 0}.site-header.scrolled{height:66px}}
 .unused-marker{display:none}
 @media(prefers-reduced-motion:reduce){body{cursor:auto!important}body:after,.hero:before,.hero h1 .gradient-text,.art-core,.floating-chip,.ticker-track,.timeline-entry:before{animation:none!important}.cursor-dot,.cursor-ring{display:none!important}}
